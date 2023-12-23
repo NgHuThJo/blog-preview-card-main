@@ -1,0 +1,44 @@
+// Primary colors
+// Naming convention based on position in color wheel
+// 30 - 210: warm - mid - cool
+// 210 - 30: cool - mid - warm
+$c-yellow-w-400: 47 88% 63%;
+
+// Neutral colors
+$c-white-000: 0 0% 100%;
+$c-gray-500: 0 0% 50%;
+$c-black-900: 0 0% 7%;
+
+// Gradients
+
+// Color map for generating color utility classes
+$utility-color: (
+);
+
+// Color map for generating custom color properties
+$contextual-color: (
+  "color": (
+    "body": $c-black-900,
+    "body-copy": $c-gray-500,
+  ),
+  "background-color": ( 
+    "body": $c-yellow-w-400,
+    "card": $c-white-000,
+  ),
+);
+
+// Theme map for generating theme classes
+$theme-color: (
+  "dark": (
+    "color": (
+    ),
+    "background-color": (
+    ),
+  ),
+  "light": (
+    "color": (
+    ),
+    "background-color": (
+    ),
+  ),
+);

@@ -1,0 +1,72 @@
+@use "./abstracts/" as *;
+@use "./base/" as *;
+@use "./components/" as *;
+@use "./layout/" as *;
+@use "./utilities/" as *;
+
+// General styles
+.card {
+  --pd-card: 1.5rem;
+  --box-shadow-size: 0.5rem 0.5rem;
+  --transition-duration: 0.5s;
+
+  @include grid;
+
+  gap: 1.5rem;
+  grid-template-rows: 1fr auto;
+  padding: var(--pd-card);
+  border-radius: 1rem;
+  box-shadow: var(--box-shadow-size) 0 0 hsl(var(--c-body));
+  transition: box-shadow var(--transition-duration);
+
+  > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0.5rem;
+  }
+  
+  &:has(a:hover) {
+    --box-shadow-size: 1rem 1rem;
+  }
+}
+
+.h1 {
+
+    a {
+      transition: color var(--transition-duration);
+
+      &:hover {
+        color: hsl(var(--bgc-body));
+      } 
+    }
+}
+
+.tag {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 0.25rem;
+  font: {
+    weight: var(--fw-heading);
+    size: var(--fs-tag);
+  }
+  background-color: hsl(var(--bgc-body));
+}
+
+.publishing-date {
+  font: {
+    size: var(--fs-publishing-date);
+  }
+}
+
+.body-copy {
+  color: hsl(var(--c-body-copy));
+}
+
+.author-info {
+  @include flex(null, null, center, 1rem);
+
+  img {
+    width: 2rem;
+  }
+}
